@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00B65AF1E69DE8400F1E284 /* EmotionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00B65AE1E69DE8400F1E284 /* EmotionCore.framework */; };
 		D02C1E541E59F8BE003C5467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E531E59F8BE003C5467 /* AppDelegate.swift */; };
 		D02C1E561E59F8BE003C5467 /* LiveViewModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E551E59F8BE003C5467 /* LiveViewModeViewController.swift */; };
 		D02C1E581E59F8BE003C5467 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E571E59F8BE003C5467 /* SecondViewController.swift */; };
@@ -16,7 +17,14 @@
 		D02C1E6B1E59F8BE003C5467 /* Emotion_DetectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E6A1E59F8BE003C5467 /* Emotion_DetectTests.swift */; };
 		D02C1E761E59F8BE003C5467 /* Emotion_DetectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E751E59F8BE003C5467 /* Emotion_DetectUITests.swift */; };
 		D02C1E871E5A1841003C5467 /* CaptureOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E861E5A1841003C5467 /* CaptureOutput.swift */; };
+		D06BDDBC1E69C84F00BBBC0C /* haarcascade_eye_tree_eyeglasses.xml in Resources */ = {isa = PBXBuildFile; fileRef = D06BDDB51E69C84F00BBBC0C /* haarcascade_eye_tree_eyeglasses.xml */; };
+		D06BDDBD1E69C84F00BBBC0C /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = D06BDDB61E69C84F00BBBC0C /* haarcascade_frontalface_alt.xml */; };
+		D06BDDBE1E69C84F00BBBC0C /* happiness.xml in Resources */ = {isa = PBXBuildFile; fileRef = D06BDDB71E69C84F00BBBC0C /* happiness.xml */; };
+		D06BDDBF1E69C84F00BBBC0C /* MBR.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D06BDDB81E69C84F00BBBC0C /* MBR.cpp */; };
+		D06BDDC01E69C84F00BBBC0C /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = D06BDDBB1E69C84F00BBBC0C /* OpenCVWrapper.mm */; };
+		D06BDDC21E69C93600BBBC0C /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06BDDC11E69C93600BBBC0C /* opencv2.framework */; };
 		D096B6601E5B356800E99D35 /* CameraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096B65F1E5B356800E99D35 /* CameraType.swift */; };
+		D09B817F1E69DE9D00E33EDC /* EmotionCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D00B65AE1E69DE8400F1E284 /* EmotionCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D06BDDDA1E69D92F00BBBC0C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D09B817F1E69DE9D00E33EDC /* EmotionCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D00B65AE1E69DE8400F1E284 /* EmotionCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EmotionCore.framework; path = "Packages/EmotionCore-1.0.11/Sources/EmotionCore.framework"; sourceTree = "<group>"; };
 		D02C1E501E59F8BE003C5467 /* Emotion Detect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emotion Detect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02C1E531E59F8BE003C5467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D02C1E551E59F8BE003C5467 /* LiveViewModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewModeViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
@@ -53,6 +76,15 @@
 		D02C1E771E59F8BE003C5467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D02C1E841E5A113E003C5467 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D02C1E861E5A1841003C5467 /* CaptureOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureOutput.swift; sourceTree = "<group>"; };
+		D06BDDB41E69C84E00BBBC0C /* Emotion Detect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Emotion Detect-Bridging-Header.h"; sourceTree = "<group>"; };
+		D06BDDB51E69C84F00BBBC0C /* haarcascade_eye_tree_eyeglasses.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = haarcascade_eye_tree_eyeglasses.xml; path = "Packages/OpenCVWrapper-1.0.4/Sources/haarcascade_eye_tree_eyeglasses.xml"; sourceTree = SOURCE_ROOT; };
+		D06BDDB61E69C84F00BBBC0C /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = haarcascade_frontalface_alt.xml; path = "Packages/OpenCVWrapper-1.0.4/Sources/haarcascade_frontalface_alt.xml"; sourceTree = SOURCE_ROOT; };
+		D06BDDB71E69C84F00BBBC0C /* happiness.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = happiness.xml; path = "Packages/OpenCVWrapper-1.0.4/Sources/happiness.xml"; sourceTree = SOURCE_ROOT; };
+		D06BDDB81E69C84F00BBBC0C /* MBR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MBR.cpp; path = "Packages/OpenCVWrapper-1.0.4/Sources/MBR.cpp"; sourceTree = SOURCE_ROOT; };
+		D06BDDB91E69C84F00BBBC0C /* MBR.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MBR.hpp; path = "Packages/OpenCVWrapper-1.0.4/Sources/MBR.hpp"; sourceTree = SOURCE_ROOT; };
+		D06BDDBA1E69C84F00BBBC0C /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenCVWrapper.h; path = "Packages/OpenCVWrapper-1.0.4/Sources/OpenCVWrapper.h"; sourceTree = SOURCE_ROOT; };
+		D06BDDBB1E69C84F00BBBC0C /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OpenCVWrapper.mm; path = "Packages/OpenCVWrapper-1.0.4/Sources/OpenCVWrapper.mm"; sourceTree = SOURCE_ROOT; };
+		D06BDDC11E69C93600BBBC0C /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = "Packages/OpenCVFramework-1.0.0/Sources/opencv2.framework"; sourceTree = "<group>"; };
 		D096B65F1E5B356800E99D35 /* CameraType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00B65AF1E69DE8400F1E284 /* EmotionCore.framework in Frameworks */,
+				D06BDDC21E69C93600BBBC0C /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +118,7 @@
 		D02C1E471E59F8BE003C5467 = {
 			isa = PBXGroup;
 			children = (
+				D06BDDB31E69C7E400BBBC0C /* OpenCVWrapper */,
 				D02C1E521E59F8BE003C5467 /* Emotion Detect */,
 				D02C1E691E59F8BE003C5467 /* Emotion DetectTests */,
 				D02C1E741E59F8BE003C5467 /* Emotion DetectUITests */,
@@ -139,9 +174,26 @@
 		D02C1E831E5A113E003C5467 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D00B65AE1E69DE8400F1E284 /* EmotionCore.framework */,
+				D06BDDC11E69C93600BBBC0C /* opencv2.framework */,
 				D02C1E841E5A113E003C5467 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D06BDDB31E69C7E400BBBC0C /* OpenCVWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				D06BDDB51E69C84F00BBBC0C /* haarcascade_eye_tree_eyeglasses.xml */,
+				D06BDDB61E69C84F00BBBC0C /* haarcascade_frontalface_alt.xml */,
+				D06BDDB71E69C84F00BBBC0C /* happiness.xml */,
+				D06BDDB81E69C84F00BBBC0C /* MBR.cpp */,
+				D06BDDB91E69C84F00BBBC0C /* MBR.hpp */,
+				D06BDDBA1E69C84F00BBBC0C /* OpenCVWrapper.h */,
+				D06BDDBB1E69C84F00BBBC0C /* OpenCVWrapper.mm */,
+				D06BDDB41E69C84E00BBBC0C /* Emotion Detect-Bridging-Header.h */,
+			);
+			path = OpenCVWrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +206,7 @@
 				D02C1E4C1E59F8BE003C5467 /* Sources */,
 				D02C1E4D1E59F8BE003C5467 /* Frameworks */,
 				D02C1E4E1E59F8BE003C5467 /* Resources */,
+				D06BDDDA1E69D92F00BBBC0C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,6 +266,7 @@
 					D02C1E4F1E59F8BE003C5467 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = WQG87JK36G;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					D02C1E651E59F8BE003C5467 = {
@@ -254,9 +308,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06BDDBD1E69C84F00BBBC0C /* haarcascade_frontalface_alt.xml in Resources */,
+				D06BDDBE1E69C84F00BBBC0C /* happiness.xml in Resources */,
 				D02C1E601E59F8BE003C5467 /* LaunchScreen.storyboard in Resources */,
 				D02C1E5D1E59F8BE003C5467 /* Assets.xcassets in Resources */,
 				D02C1E5B1E59F8BE003C5467 /* Main.storyboard in Resources */,
+				D06BDDBC1E69C84F00BBBC0C /* haarcascade_eye_tree_eyeglasses.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +341,8 @@
 				D02C1E581E59F8BE003C5467 /* SecondViewController.swift in Sources */,
 				D096B6601E5B356800E99D35 /* CameraType.swift in Sources */,
 				D02C1E541E59F8BE003C5467 /* AppDelegate.swift in Sources */,
+				D06BDDBF1E69C84F00BBBC0C /* MBR.cpp in Sources */,
+				D06BDDC01E69C84F00BBBC0C /* OpenCVWrapper.mm in Sources */,
 				D02C1E561E59F8BE003C5467 /* LiveViewModeViewController.swift in Sources */,
 				D02C1E871E5A1841003C5467 /* CaptureOutput.swift in Sources */,
 			);
@@ -437,11 +496,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WQG87JK36G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Packages/OpenCVFramework-1.0.0/Sources",
+					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.9/Sources",
+					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.10/Sources",
+					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.11/Sources",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Emotion Detect/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.peterentwistle.Emotion-Detect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenCVWrapper/Emotion Detect-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -450,11 +520,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WQG87JK36G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Packages/OpenCVFramework-1.0.0/Sources",
+					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.9/Sources",
+					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.10/Sources",
+					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.11/Sources",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Emotion Detect/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.peterentwistle.Emotion-Detect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenCVWrapper/Emotion Detect-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
