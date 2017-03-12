@@ -25,25 +25,8 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
         super.viewDidLoad()
         
         openCVWrapper = OpenCVWrapper()
-        
         loadCamera(camera: .front)
-        
-        // Add image view
-        //imageView = UIImageView(frame: CGRect(x: previewLayer.frame.maxX, y: previewLayer.frame.maxY, width: previewLayer.frame.width, height: previewLayer.frame.height))
-        //self.view.addSubview(imageView)
-        //self.view.bringSubview(toFront: imageView)
-        
         emotionIcon.isHidden = true
-        
-        let myOutput = AVCaptureVideoDataOutput()
-        myOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as AnyHashable: Int(kCVPixelFormatType_32BGRA)]
-        
-        let queue: DispatchQueue = DispatchQueue(label: "myqueue",  attributes: [])
-        
-        //let captureOutput: CaptureOutput = CaptureOutput()
-        myOutput.setSampleBufferDelegate(self, queue: queue)
-        
-        captureSession.addOutput(myOutput)
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,6 +47,34 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
     
     @IBAction func stopDetecting(_ sender: Any) {
         startDetecting = false
+    }
+    
+    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
+        DispatchQueue.main.sync(execute: {
+            
+            let image = CameraUtil.imageFromSampleBuffer(sampleBuffer)
+            
+            connection.videoOrientation = AVCaptureVideoOrientation.portrait
+            
+            if startDetecting {
+                let response = openCVWrapper.detectAndDisplay(image)
+                imageView.image = response?.frame
+                
+                if let emotion = response?.detectedEmotion {
+                    
+                    if emotion.emotion == .happiness {
+                        showImage(imageName: "happiness")
+                        print("Happiness!")
+                    } else {
+                        hideImage()
+                        print("None")
+                    }
+                }
+            } else {
+                imageView.image = image
+            }
+            
+        })
     }
     
     private func cameraDevices(position: AVCaptureDevicePosition) -> [AVCaptureDevice]? {
@@ -90,52 +101,22 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
             print("Can't find camera")
         }
         
-        //previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        
-        //self.view.layer.addSublayer(previewLayer!)
-        //previewLayer?.frame = self.view.layer.frame
-        
         self.view.bringSubview(toFront: switchCamera)
         
         captureSession.startRunning()
+        addOutput()
     }
     
-    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
-        DispatchQueue.main.sync(execute: {
-            
-            let image = CameraUtil.imageFromSampleBuffer(sampleBuffer)
-            
-            connection.videoOrientation = AVCaptureVideoOrientation.portrait
-            
-            if startDetecting {
-                let response = openCVWrapper.detectAndDisplay(image)
-                //self.imageView.image = response?.frame
-                imageView.image = response?.frame
-                
-                if let emotion = response?.detectedEmotion {
-                    
-                    if emotion.emotion == .happiness {
-                        showImage(imageName: "happiness")
-                        print("Happiness!")
-                        //detectedEmotion.text = "Happiness!"
-                        //detectedEmotion.textColor = UIColor.red
-                        //detectedEmotion.font = detectedEmotion.font.withSize(30)
-                    } else {
-                        hideImage()
-                        print("None")
-                        //detectedEmotion.text = "None"
-                        //detectedEmotion.textColor = UIColor.black
-                        //detectedEmotion.font = detectedEmotion.font.withSize(17)
-                    }
-                    //self.emotionImageView.image = emotion.frame
-                }
-            } else {
-                imageView.image = image
-            }
-            
-        })
+    private func addOutput() {
+        let myOutput = AVCaptureVideoDataOutput()
+        myOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as AnyHashable: Int(kCVPixelFormatType_32BGRA)]
+        
+        let queue: DispatchQueue = DispatchQueue(label: "myqueue",  attributes: [])
+        
+        myOutput.setSampleBufferDelegate(self, queue: queue)
+        captureSession.addOutput(myOutput)
     }
-    
+
     private func showImage(imageName: String) {
         emotionIcon.image = UIImage(named: imageName)
         emotionIcon.isHidden = false
