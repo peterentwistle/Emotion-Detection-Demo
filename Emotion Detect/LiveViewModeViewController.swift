@@ -23,10 +23,16 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         openCVWrapper = OpenCVWrapper()
-        loadCamera(camera: .front)
         emotionIcon.isHidden = true
+        loadCamera(camera: .front)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        startDetecting = false
     }
     
     override func didReceiveMemoryWarning() {
