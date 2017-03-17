@@ -98,10 +98,9 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
         if camera == CameraType.back {
             position = AVCaptureDevicePosition.back
         }
-        
-        let selectedCamera = (cameraDevices(position: position)?.first)!
-        
+    
         do {
+            let selectedCamera = (cameraDevices(position: position)?.first)
             try captureSession.addInput(AVCaptureDeviceInput(device: selectedCamera))
         } catch {
             print("Can't find camera")
