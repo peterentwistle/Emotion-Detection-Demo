@@ -24,7 +24,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUg-dk-ox1">
                                 <rect key="frame" x="334" y="28" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="switch-camera2"/>
+                                <state key="normal" title="SwitchCamera" image="switch-camera2"/>
                                 <connections>
                                     <action selector="switchCamera:" destination="9pv-A4-QxB" eventType="touchUpInside" id="noV-JA-iVS"/>
                                 </connections>

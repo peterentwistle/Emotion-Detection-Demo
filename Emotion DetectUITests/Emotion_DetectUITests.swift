@@ -9,7 +9,7 @@
 import XCTest
 
 class Emotion_DetectUITests: XCTestCase {
-        
+    
     override func setUp() {
         super.setUp()
         
@@ -21,6 +21,7 @@ class Emotion_DetectUITests: XCTestCase {
         XCUIApplication().launch()
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        XCUIDevice.shared().orientation = .portrait
     }
     
     override func tearDown() {
@@ -31,6 +32,16 @@ class Emotion_DetectUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let button = XCUIApplication().buttons["SwitchCamera"]
+        button.tap()
+        button.tap()
+        XCUIApplication().buttons["Start"].tap()
+        XCUIApplication().buttons["Stop"].tap()
+        
+        let tabBarsQuery = XCUIApplication().tabBars
+        tabBarsQuery.buttons["Video"].tap()
+        tabBarsQuery.buttons["Photo"].tap()
+        tabBarsQuery.buttons["Settings"].tap()
     }
     
 }
