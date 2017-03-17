@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D02A9FB31E7C33F3005AD526 /* EmotionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00B65AE1E69DE8400F1E284 /* EmotionCore.framework */; };
+		D02A9FB51E7C593E005AD526 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02A9FB41E7C593E005AD526 /* ResultsTableViewController.swift */; };
 		D02C1E541E59F8BE003C5467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E531E59F8BE003C5467 /* AppDelegate.swift */; };
 		D02C1E561E59F8BE003C5467 /* LiveViewModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E551E59F8BE003C5467 /* LiveViewModeViewController.swift */; };
 		D02C1E581E59F8BE003C5467 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E571E59F8BE003C5467 /* SecondViewController.swift */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		D00B65AE1E69DE8400F1E284 /* EmotionCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EmotionCore.framework; path = "Packages/EmotionCore-1.0.12/Sources/EmotionCore.framework"; sourceTree = "<group>"; };
+		D02A9FB41E7C593E005AD526 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		D02C1E501E59F8BE003C5467 /* Emotion Detect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emotion Detect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02C1E531E59F8BE003C5467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D02C1E551E59F8BE003C5467 /* LiveViewModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewModeViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
@@ -143,6 +145,7 @@
 				D02C1E531E59F8BE003C5467 /* AppDelegate.swift */,
 				D02C1E551E59F8BE003C5467 /* LiveViewModeViewController.swift */,
 				D02C1E571E59F8BE003C5467 /* SecondViewController.swift */,
+				D02A9FB41E7C593E005AD526 /* ResultsTableViewController.swift */,
 				D02C1E591E59F8BE003C5467 /* Main.storyboard */,
 				D02C1E5C1E59F8BE003C5467 /* Assets.xcassets */,
 				D02C1E5E1E59F8BE003C5467 /* LaunchScreen.storyboard */,
@@ -338,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02A9FB51E7C593E005AD526 /* ResultsTableViewController.swift in Sources */,
 				D02C1E581E59F8BE003C5467 /* SecondViewController.swift in Sources */,
 				D096B6601E5B356800E99D35 /* CameraType.swift in Sources */,
 				D02C1E541E59F8BE003C5467 /* AppDelegate.swift in Sources */,
