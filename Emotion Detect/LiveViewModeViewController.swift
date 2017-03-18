@@ -53,6 +53,8 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
     
     @IBAction func stopDetecting(_ sender: Any) {
         startDetecting = false
+
+        self.tabBarController?.selectedIndex = 3
     }
     
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
@@ -98,10 +100,9 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
         if camera == CameraType.back {
             position = AVCaptureDevicePosition.back
         }
-        
-        let selectedCamera = (cameraDevices(position: position)?.first)!
-        
+    
         do {
+            let selectedCamera = (cameraDevices(position: position)?.first)
             try captureSession.addInput(AVCaptureDeviceInput(device: selectedCamera))
         } catch {
             print("Can't find camera")
