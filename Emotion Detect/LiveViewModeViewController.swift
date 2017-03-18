@@ -53,8 +53,8 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
     
     @IBAction func stopDetecting(_ sender: Any) {
         startDetecting = false
-        
-        self.performSegue(withIdentifier: "Results", sender:self)
+
+        self.tabBarController?.selectedIndex = 3
     }
     
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
