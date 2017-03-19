@@ -20,6 +20,9 @@ class ResultsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        // TEST 
+        //resultData = [ResultData(image: #imageLiteral(resourceName: "happiness"), text: "Happiness")]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,12 +37,12 @@ class ResultsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        // return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        // return the number of rows
         return resultData.count
     }
 
@@ -52,6 +55,18 @@ class ResultsTableViewController: UITableViewController {
         cell.emotionText.text = resultData[indexPath.row].text
         
         return cell
+    }
+    
+    // MARK: - Segues
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detectedDetail" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let result = resultData[indexPath.row]
+                let controller = segue.destination as! DetectedEmotionViewController
+                controller.data = result
+            }
+        }
     }
 
     /*

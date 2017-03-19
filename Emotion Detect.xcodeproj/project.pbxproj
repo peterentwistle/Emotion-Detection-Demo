@@ -28,6 +28,7 @@
 		D09B817F1E69DE9D00E33EDC /* EmotionCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D00B65AE1E69DE8400F1E284 /* EmotionCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D0A6955A1E7DEB88008A19F1 /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A695591E7DEB88008A19F1 /* ResultsTableViewCell.swift */; };
 		D0A6955C1E7DF81B008A19F1 /* ResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A6955B1E7DF81B008A19F1 /* ResultData.swift */; };
+		D0A6955F1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A6955E1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		D096B65F1E5B356800E99D35 /* CameraType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraType.swift; sourceTree = "<group>"; };
 		D0A695591E7DEB88008A19F1 /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 		D0A6955B1E7DF81B008A19F1 /* ResultData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultData.swift; sourceTree = "<group>"; };
+		D0A6955E1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectedEmotionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,10 +148,8 @@
 		D02C1E521E59F8BE003C5467 /* Emotion Detect */ = {
 			isa = PBXGroup;
 			children = (
+				D0A6955D1E7EFB20008A19F1 /* ViewControllers */,
 				D02C1E531E59F8BE003C5467 /* AppDelegate.swift */,
-				D02C1E551E59F8BE003C5467 /* LiveViewModeViewController.swift */,
-				D02C1E571E59F8BE003C5467 /* SecondViewController.swift */,
-				D02A9FB41E7C593E005AD526 /* ResultsTableViewController.swift */,
 				D0A695591E7DEB88008A19F1 /* ResultsTableViewCell.swift */,
 				D02C1E591E59F8BE003C5467 /* Main.storyboard */,
 				D02C1E5C1E59F8BE003C5467 /* Assets.xcassets */,
@@ -203,6 +203,17 @@
 				D06BDDB41E69C84E00BBBC0C /* Emotion Detect-Bridging-Header.h */,
 			);
 			path = OpenCVWrapper;
+			sourceTree = "<group>";
+		};
+		D0A6955D1E7EFB20008A19F1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D02C1E551E59F8BE003C5467 /* LiveViewModeViewController.swift */,
+				D02C1E571E59F8BE003C5467 /* SecondViewController.swift */,
+				D02A9FB41E7C593E005AD526 /* ResultsTableViewController.swift */,
+				D0A6955E1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +366,7 @@
 				D02C1E541E59F8BE003C5467 /* AppDelegate.swift in Sources */,
 				D06BDDBF1E69C84F00BBBC0C /* MBR.cpp in Sources */,
 				D06BDDC01E69C84F00BBBC0C /* OpenCVWrapper.mm in Sources */,
+				D0A6955F1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift in Sources */,
 				D02C1E561E59F8BE003C5467 /* LiveViewModeViewController.swift in Sources */,
 				D02C1E871E5A1841003C5467 /* CaptureOutput.swift in Sources */,
 			);

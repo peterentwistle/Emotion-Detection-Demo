@@ -133,6 +133,35 @@
             </objects>
             <point key="canvasLocation" x="2279.1999999999998" y="795.6521739130435"/>
         </scene>
+        <!--Emotion: (value)-->
+        <scene sceneID="2wi-V9-EKv">
+            <objects>
+                <viewController id="8tL-dX-5P5" customClass="DetectedEmotionViewController" customModule="Emotion_Detect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nTt-Se-U1P"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nal-yB-8u7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zvq-jq-9qQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PkE-HI-WsX">
+                                <rect key="frame" x="33" y="64" width="308" height="554"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Emotion: (value)" id="dCW-xF-6Cs"/>
+                    <connections>
+                        <outlet property="emotionImage" destination="PkE-HI-WsX" id="vQ1-CG-Had"/>
+                        <outlet property="viewTitle" destination="dCW-xF-6Cs" id="64m-Wd-Ric"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2FN-ow-Bz4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2068" y="1557.5712143928038"/>
+        </scene>
         <!--Photo-->
         <scene sceneID="Y0C-Ij-ceG">
             <objects>
@@ -171,11 +200,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultCell" rowHeight="76" id="yAr-gh-5X9" customClass="ResultsTableViewCell" customModule="Emotion_Detect" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="resultCell" rowHeight="76" id="yAr-gh-5X9" customClass="ResultsTableViewCell" customModule="Emotion_Detect" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="76"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yAr-gh-5X9" id="N7P-Ec-dav">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lQR-62-Wal">
@@ -201,6 +230,7 @@
                                 <connections>
                                     <outlet property="emotionImage" destination="lQR-62-Wal" id="A4u-5I-r1U"/>
                                     <outlet property="emotionText" destination="xg7-7A-Igk" id="1WD-s0-120"/>
+                                    <segue destination="8tL-dX-5P5" kind="show" identifier="detectedDetail" id="TEr-IQ-48p"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
