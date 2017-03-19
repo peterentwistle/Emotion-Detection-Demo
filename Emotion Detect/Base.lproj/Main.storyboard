@@ -66,12 +66,11 @@
                         <outlet property="emotionIcon" destination="h4b-EO-p58" id="ZqO-6u-5vr"/>
                         <outlet property="imageView" destination="OF9-cz-EfV" id="NgT-wf-Ymx"/>
                         <outlet property="switchCamera" destination="WUg-dk-ox1" id="VTU-1J-g0x"/>
-                        <segue destination="Uxx-XW-Tj7" kind="presentation" identifier="Results" modalPresentationStyle="pageSheet" id="zXU-lI-PQ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="-319"/>
+            <point key="canvasLocation" x="-1303" y="796"/>
         </scene>
         <!--Video-->
         <scene sceneID="wg7-f3-ORb">
@@ -103,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="421"/>
+            <point key="canvasLocation" x="-650" y="796"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Fli-Cn-4AS">
@@ -132,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEh-f5-Lcp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1425" y="421"/>
+            <point key="canvasLocation" x="1340" y="796"/>
         </scene>
         <!--Photo-->
         <scene sceneID="Y0C-Ij-ceG">
@@ -161,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4n-Tt-shP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1476" y="-318"/>
+            <point key="canvasLocation" x="20" y="796"/>
         </scene>
         <!--Results-->
         <scene sceneID="rky-da-dAq">
@@ -172,7 +171,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="yAr-gh-5X9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultCell" rowHeight="76" id="yAr-gh-5X9" customClass="ResultsTableViewCell" customModule="Emotion_Detect" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="76"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yAr-gh-5X9" id="N7P-Ec-dav">
@@ -183,8 +182,15 @@
                                             <rect key="frame" x="8" y="8" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detected: (emotion) " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJi-M0-W57">
-                                            <rect key="frame" x="84" y="8" width="283" height="50"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detected:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJi-M0-W57">
+                                            <rect key="frame" x="84" y="8" width="109" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(emotion)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xg7-7A-Igk">
+                                            <rect key="frame" x="175" y="23" width="192" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -192,6 +198,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="emotionImage" destination="lQR-62-Wal" id="A4u-5I-r1U"/>
+                                    <outlet property="emotionText" destination="xg7-7A-Igk" id="1WD-s0-120"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -204,7 +214,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAS-vu-Tt7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2082" y="421"/>
+            <point key="canvasLocation" x="682" y="796"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -237,7 +247,4 @@
         <image name="switch-camera2" width="25" height="25"/>
         <image name="video" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="zXl-7F-YVK"/>
-    </inferredMetricsTieBreakers>
 </document>

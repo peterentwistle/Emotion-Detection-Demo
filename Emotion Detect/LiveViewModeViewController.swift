@@ -15,11 +15,14 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var emotionIcon: UIImageView!
     
+    private var resultData: [ResultData] = []
+    
     var currentCamera: CameraType!
     var openCVWrapper: OpenCVWrapper!
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     var startDetecting: Bool = false
+    var hasRan: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,7 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
         openCVWrapper = OpenCVWrapper()
         emotionIcon.isHidden = true
         loadCamera(camera: .front)
+        hasRan = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -49,12 +53,19 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
     
     @IBAction func startDetecting(_ sender: Any) {
         startDetecting = true
+        hasRan = true
+        resultData = []
     }
     
     @IBAction func stopDetecting(_ sender: Any) {
         startDetecting = false
 
-        self.tabBarController?.selectedIndex = 3
+        if hasRan {
+            let tabNumber = 3
+            let resultsTab = tabBarController?.viewControllers?[tabNumber] as! ResultsTableViewController
+            resultsTab.resultData = resultData
+            self.tabBarController?.selectedIndex = tabNumber
+        }
     }
     
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
@@ -73,6 +84,8 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
                     if emotion.emotion == .happiness {
                         showImage(imageName: "happiness")
                         print("Happiness!")
+                        
+                        resultData.append(ResultData(image: (response?.frame)!, text: "Happiness"))
                     } else {
                         hideImage()
                         print("None")
