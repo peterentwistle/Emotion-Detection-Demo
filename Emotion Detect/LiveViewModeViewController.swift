@@ -62,7 +62,9 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
 
         if hasRan {
             let tabNumber = 3
-            let resultsTab = tabBarController?.viewControllers?[tabNumber] as! ResultsTableViewController
+            let navController = tabBarController?.viewControllers?[tabNumber] as! UINavigationController
+            let resultsTab = navController.viewControllers[0] as! ResultsTableViewController
+            
             resultsTab.resultData = resultData
             self.tabBarController?.selectedIndex = tabNumber
         }
