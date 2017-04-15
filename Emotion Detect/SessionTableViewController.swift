@@ -1,17 +1,17 @@
 //
-//  ResultsTableViewController.swift
+//  SessionTableViewController.swift
 //  Emotion Detect
 //
-//  Created by Peter Entwistle on 17/03/2017.
+//  Created by Peter Entwistle on 20/03/2017.
 //  Copyright © 2017 Peter Entwistle. All rights reserved.
 //
 
 import UIKit
 
-class ResultsTableViewController: UITableViewController {
-    
-    var resultData: [ResultData] = []
+class SessionTableViewController: UITableViewController {
 
+	var sessionData: [SessionData] = []
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,19 +20,16 @@ class ResultsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        // TEST 
-        //resultData = [ResultData(image: #imageLiteral(resourceName: "happiness"), text: "Happiness")]
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		tableView.reloadData()
+	}
 
     // MARK: - Table view data source
 
@@ -42,30 +39,30 @@ class ResultsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // return the number of rows
-        return resultData.count
+        // #warning Incomplete implementation, return the number of rows
+        return sessionData.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "resultCell", for: indexPath) as! ResultsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "sessionCell", for: indexPath) as! SessionTableViewCell
 
-        cell.emotionImage.image = resultData[indexPath.row].image
-        cell.emotionText.text = resultData[indexPath.row].text
-        
+        cell.sessionLabel.text = sessionData[indexPath.row].date
+		cell.happinessPercent.text = "Happiness: 100%"
+		
         return cell
     }
-    
-    // MARK: - Segues
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "detectedDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let result = resultData[indexPath.row]
-                let controller = segue.destination as! DetectedEmotionViewController
-                controller.data = result
-            }
-        }
-    }
+	
+	// MARK: - Segues
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "sessionSegue" {
+			if let indexPath = self.tableView.indexPathForSelectedRow {
+				let result = sessionData[indexPath.row].resultData
+				let controller = segue.destination as! ResultsTableViewController
+				controller.resultData = result
+			}
+		}
+	}
 
     /*
     // Override to support conditional editing of the table view.
