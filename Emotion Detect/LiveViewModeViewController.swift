@@ -14,8 +14,9 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
     @IBOutlet weak var switchCamera: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var emotionIcon: UIImageView!
-    
-    private var resultData: [ResultData] = []
+	
+	private var sessionData: [SessionData] = []
+	private var currentResult: [ResultData] = []
     
     var currentCamera: CameraType!
     var openCVWrapper: OpenCVWrapper!
@@ -54,19 +55,21 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
     @IBAction func startDetecting(_ sender: Any) {
         startDetecting = true
         hasRan = true
-        resultData = []
     }
     
     @IBAction func stopDetecting(_ sender: Any) {
         startDetecting = false
 
         if hasRan {
+			sessionData.append(SessionData(date: "\(Date())", resultData: currentResult))
+			
+			// Switch tab
             let tabNumber = 3
             let navController = tabBarController?.viewControllers?[tabNumber] as! UINavigationController
-            let resultsTab = navController.viewControllers[0] as! ResultsTableViewController
-            
-            resultsTab.resultData = resultData
-            self.tabBarController?.selectedIndex = tabNumber
+            let sessionTab = navController.viewControllers[0] as! SessionTableViewController
+			
+			sessionTab.sessionData = sessionData
+			self.tabBarController?.selectedIndex = tabNumber
         }
     }
     
@@ -87,7 +90,7 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
                         showImage(imageName: "happiness")
                         print("Happiness!")
                         
-                        resultData.append(ResultData(image: (response?.frame)!, text: "Happiness"))
+                        currentResult.append(ResultData(image: (response?.frame)!, text: "Happiness"))
                     } else {
                         hideImage()
                         print("None")
