@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D02A9FB31E7C33F3005AD526 /* EmotionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00B65AE1E69DE8400F1E284 /* EmotionCore.framework */; };
 		D02A9FB51E7C593E005AD526 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02A9FB41E7C593E005AD526 /* ResultsTableViewController.swift */; };
 		D02C1E541E59F8BE003C5467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E531E59F8BE003C5467 /* AppDelegate.swift */; };
 		D02C1E561E59F8BE003C5467 /* LiveViewModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E551E59F8BE003C5467 /* LiveViewModeViewController.swift */; };
@@ -28,10 +27,11 @@
 		D076E4331E7FDB2600ED584E /* SessionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D076E4321E7FDB2600ED584E /* SessionTableViewController.swift */; };
 		D076E4351E7FEB6D00ED584E /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D076E4341E7FEB6D00ED584E /* SessionData.swift */; };
 		D096B6601E5B356800E99D35 /* CameraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096B65F1E5B356800E99D35 /* CameraType.swift */; };
-		D09B817F1E69DE9D00E33EDC /* EmotionCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D00B65AE1E69DE8400F1E284 /* EmotionCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D0A6955A1E7DEB88008A19F1 /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A695591E7DEB88008A19F1 /* ResultsTableViewCell.swift */; };
 		D0A6955C1E7DF81B008A19F1 /* ResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A6955B1E7DF81B008A19F1 /* ResultData.swift */; };
 		D0A6955F1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A6955E1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift */; };
+		D0BDCCF11EA2CE9D00907298 /* EmotionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BDCCF01EA2CE9D00907298 /* EmotionCore.framework */; };
+		D0BDCCF31EA2CEBD00907298 /* EmotionCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0BDCCF21EA2CEBD00907298 /* EmotionCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D09B817F1E69DE9D00E33EDC /* EmotionCore.framework in Embed Frameworks */,
+				D0BDCCF31EA2CEBD00907298 /* EmotionCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +100,8 @@
 		D0A695591E7DEB88008A19F1 /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 		D0A6955B1E7DF81B008A19F1 /* ResultData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultData.swift; sourceTree = "<group>"; };
 		D0A6955E1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectedEmotionViewController.swift; sourceTree = "<group>"; };
+		D0BDCCF01EA2CE9D00907298 /* EmotionCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EmotionCore.framework; path = "Packages/EmotionCore-1.0.13/Sources/EmotionCore.framework"; sourceTree = "<group>"; };
+		D0BDCCF21EA2CEBD00907298 /* EmotionCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EmotionCore.framework; path = "Packages/EmotionCore-1.0.13/Sources/EmotionCore.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02A9FB31E7C33F3005AD526 /* EmotionCore.framework in Frameworks */,
+				D0BDCCF11EA2CE9D00907298 /* EmotionCore.framework in Frameworks */,
 				D06BDDC21E69C93600BBBC0C /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +134,7 @@
 		D02C1E471E59F8BE003C5467 = {
 			isa = PBXGroup;
 			children = (
+				D0BDCCF21EA2CEBD00907298 /* EmotionCore.framework */,
 				D06BDDB31E69C7E400BBBC0C /* OpenCVWrapper */,
 				D02C1E521E59F8BE003C5467 /* Emotion Detect */,
 				D02C1E691E59F8BE003C5467 /* Emotion DetectTests */,
@@ -190,6 +193,7 @@
 		D02C1E831E5A113E003C5467 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0BDCCF01EA2CE9D00907298 /* EmotionCore.framework */,
 				D00B65AE1E69DE8400F1E284 /* EmotionCore.framework */,
 				D06BDDC11E69C93600BBBC0C /* opencv2.framework */,
 				D02C1E841E5A113E003C5467 /* AVFoundation.framework */,
@@ -547,6 +551,7 @@
 					"$(PROJECT_DIR)/Packages/OpenCVFramework-1.0.0/Sources",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.12/Sources",
+					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.13/Sources",
 				);
 				INFOPLIST_FILE = "Emotion Detect/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -569,6 +574,7 @@
 					"$(PROJECT_DIR)/Packages/OpenCVFramework-1.0.0/Sources",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.12/Sources",
+					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.13/Sources",
 				);
 				INFOPLIST_FILE = "Emotion Detect/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
