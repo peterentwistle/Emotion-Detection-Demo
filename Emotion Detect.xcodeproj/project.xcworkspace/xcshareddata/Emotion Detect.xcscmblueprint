@@ -13,7 +13,7 @@
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "45A417573C890E79E73B84BDE6C1CA7660324E9E" : "Emotion%20Detect\/Packages\/OpenCVWrapper-1.0.4\/",
     "C0ECDBBA46DC21602103E43044CC875D6F8D5F7C" : "Emotion%20Detect\/",
-    "AF3DA699A657866DD0D68EA7A39A7B2BBD79685C" : "Emotion%20Detect\/Packages\/EmotionCore-1.0.12\/",
+    "AF3DA699A657866DD0D68EA7A39A7B2BBD79685C" : "Emotion%20Detect\/Packages\/EmotionCore-1.0.13\/",
     "A981A463BFBEF67A9BF297FE6EF118461C9EFC4D" : "Emotion%20Detect\/Packages\/OpenCVFramework-1.0.0\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Emotion Detect",
