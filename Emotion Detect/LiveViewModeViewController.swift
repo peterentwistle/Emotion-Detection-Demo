@@ -55,6 +55,9 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
     @IBAction func startDetecting(_ sender: Any) {
         startDetecting = true
         hasRan = true
+        
+        // Empty the current result
+        currentResult = []
     }
     
     @IBAction func stopDetecting(_ sender: Any) {
