@@ -10,14 +10,16 @@ import UIKit
 import AVFoundation
 import CoreData
 
-class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+class LiveViewModeViewController: UIViewController {
     
     @IBOutlet weak var switchCamera: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var emotionIcon: UIImageView!
-	
+    @IBOutlet weak var startbutton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    
 	private var sessionData: [SessionData] = []
-	private var currentResult: [Result] = []
+    var currentResult: [Result] = []
     
     var currentCamera: CameraType!
     var openCVWrapper: OpenCVWrapper!
@@ -25,9 +27,13 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
     var previewLayer: AVCaptureVideoPreviewLayer!
     var startDetecting: Bool = false
     var hasRan: Bool = false
+    var posNegMode: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startbutton = setupButton(button: startbutton)
+        stopButton = setupButton(button: stopButton)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -68,62 +74,13 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
             self.save(date: Date(), resultData: currentResult)
             
 			// Switch tab
-            let tabNumber = 3
+            let tabNumber = 2
             let navController = tabBarController?.viewControllers?[tabNumber] as! UINavigationController
             let sessionTab = navController.viewControllers[0] as! SessionTableViewController
 			
 			sessionTab.sessionData = sessionData
 			self.tabBarController?.selectedIndex = tabNumber
         }
-    }
-    
-    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
-        DispatchQueue.main.sync(execute: {
-            
-            let image = CameraUtil.imageFromSampleBuffer(sampleBuffer)
-            
-            connection.videoOrientation = AVCaptureVideoOrientation.portrait
-            
-            if startDetecting {
-                let response = openCVWrapper.detectAndDisplay(image)
-                imageView.image = response?.frame
-                
-                if let emotion = response?.detectedEmotion {
-                    
-                    switch emotion.emotion {
-                    case .happiness:
-                        detectedEmotion(name: "Happiness", response: response)
-                    case .anger:
-                        detectedEmotion(name: "Anger", response: response)
-                    case .contempt:
-                        detectedEmotion(name: "Contempt", response: response)
-                    case .fear:
-                       detectedEmotion(name: "Fear", response: response)
-                    case .neutral:
-                        detectedEmotion(name: "Neutral", response: response)
-                    case .sadness:
-                        detectedEmotion(name: "Sadness", response: response)
-                    case .surprise:
-                        detectedEmotion(name: "Surprise", response: response)
-                    case .disgust:
-                        detectedEmotion(name: "Disgust", response: response)
-                    default:
-                        hideImage()
-                        print("None")
-                    }
-                    
-                }
-            } else {
-                imageView.image = image
-            }
-            
-        })
-    }
-    
-    private func detectedEmotion(name: String, response: DetectedResult?) {
-        showImage(imageName: "happiness")
-        print("\(name)!")
-        currentResult.append(Result(image: (response?.frame)!, text: name))
     }
     
     private func save(date: Date, resultData: [Result]) {
@@ -208,15 +165,31 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
         myOutput.setSampleBufferDelegate(self, queue: queue)
         captureSession.addOutput(myOutput)
     }
+    
+    func setupButton(button: UIButton) -> UIButton {
+        button.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.8)
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.clear.cgColor
+        return button
+    }
 
-    private func showImage(imageName: String) {
+    func showImage(imageName: String) {
         emotionIcon.image = UIImage(named: imageName)
         emotionIcon.isHidden = false
     }
     
-    private func hideImage () {
+    func hideImage () {
         emotionIcon.isHidden = true
     }
     
+}
+
+extension LiveViewModeViewController: EmotionDetectable {
+    func detectedEmotion(name: String, response: DetectedResult?) {
+        showImage(imageName: "happiness")
+        print("\(name)!")
+        currentResult.append(Result(image: (response?.frame)!, text: name))
+    }
 }
 

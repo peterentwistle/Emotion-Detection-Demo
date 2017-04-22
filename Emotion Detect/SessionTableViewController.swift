@@ -12,7 +12,7 @@ import CoreData
 class SessionTableViewController: UITableViewController {
 
 	var sessionData: [SessionData] = []
-	
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -67,15 +67,13 @@ class SessionTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sessionCell", for: indexPath) as! SessionTableViewCell
 
         let currentSession = sessionData[indexPath.row]
-        
-        let happyResultsCount = currentSession.resultData?.filter {($0 as AnyObject).text == "Happiness"}.count
+
         let recordCount = currentSession.resultData?.count
-        let happinessPercent: Double = (Double(happyResultsCount!) / Double(recordCount!)) * 100
-        
+ 
         let date = currentSession.value(forKeyPath: "date") as! Date
         
         cell.sessionLabel.text = "\(date)"
-        cell.happinessPercent.text = "Happiness: \(String(format: "%.01f", happinessPercent))%"
+        cell.happinessPercent.text = "\(recordCount!) emotions detected"
     
         return cell
     }
@@ -100,17 +98,29 @@ class SessionTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            
+            guard let appDelegate =
+                UIApplication.shared.delegate as? AppDelegate else {
+                    return
+            }
+            
+            let managedContext = appDelegate.persistentContainer.viewContext
+            
+            // Delete from context
+            managedContext.delete(sessionData[indexPath.row])
+            appDelegate.saveContext()
+            
+            // Remove from sessiondata array
+            sessionData.remove(at: indexPath.row)
+
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
 
     /*
     // Override to support rearranging the table view.
