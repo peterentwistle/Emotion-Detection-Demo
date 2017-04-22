@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SessionTableViewController: UITableViewController {
 
@@ -28,6 +29,25 @@ class SessionTableViewController: UITableViewController {
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
+        // Get the app delegate
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        // Session data fetch request
+        let fetchRequest =
+            NSFetchRequest<SessionData>(entityName: "SessionData")
+        
+        // Try to fetch the session data
+        do {
+            sessionData = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
 		tableView.reloadData()
 	}
 
@@ -46,9 +66,17 @@ class SessionTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sessionCell", for: indexPath) as! SessionTableViewCell
 
-        cell.sessionLabel.text = sessionData[indexPath.row].date
-		cell.happinessPercent.text = "Happiness: 100%"
-		
+        let currentSession = sessionData[indexPath.row]
+        
+        let happyResultsCount = currentSession.resultData?.filter {($0 as AnyObject).text == "Happiness"}.count
+        let recordCount = currentSession.resultData?.count
+        let happinessPercent: Double = (Double(happyResultsCount!) / Double(recordCount!)) * 100
+        
+        let date = currentSession.value(forKeyPath: "date") as! Date
+        
+        cell.sessionLabel.text = "\(date)"
+        cell.happinessPercent.text = "Happiness: \(String(format: "%.01f", happinessPercent))%"
+    
         return cell
     }
 	
@@ -57,9 +85,9 @@ class SessionTableViewController: UITableViewController {
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "sessionSegue" {
 			if let indexPath = self.tableView.indexPathForSelectedRow {
-				let result = sessionData[indexPath.row].resultData
+				let result = sessionData[indexPath.row].value(forKeyPath: "resultData") as! NSSet
 				let controller = segue.destination as! ResultsTableViewController
-				controller.resultData = result
+				controller.resultData = result.allObjects as! [ResultData]
 			}
 		}
 	}

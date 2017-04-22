@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ResultData" representedClassName="ResultData" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sessionData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SessionData" inverseName="resultData" inverseEntity="SessionData" syncable="YES"/>
+    </entity>
+    <entity name="SessionData" representedClassName="SessionData" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="resultData" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ResultData" inverseName="sessionData" inverseEntity="ResultData" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SessionData" positionX="-236" positionY="-81" width="128" height="73"/>
+        <element name="ResultData" positionX="-18" positionY="36" width="128" height="88"/>
+    </elements>
+</model>
