@@ -46,9 +46,14 @@ class SessionTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sessionCell", for: indexPath) as! SessionTableViewCell
 
-        cell.sessionLabel.text = sessionData[indexPath.row].date
-		cell.happinessPercent.text = "Happiness: 100%"
-		
+        let currentSession = sessionData[indexPath.row]
+        
+        let happyResultsCount = currentSession.resultData.filter {$0.text == "Happiness"}.count
+        let happinessPercent: Double = (Double(happyResultsCount) / Double(currentSession.resultData.count)) * 100
+        
+        cell.sessionLabel.text = currentSession.date
+        cell.happinessPercent.text = "Happiness: \(String(format: "%.01f", happinessPercent))%"
+    
         return cell
     }
 	
