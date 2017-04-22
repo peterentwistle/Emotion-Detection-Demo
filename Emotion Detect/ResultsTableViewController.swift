@@ -25,10 +25,10 @@ class ResultsTableViewController: UITableViewController {
         //resultData = [ResultData(image: #imageLiteral(resourceName: "happiness"), text: "Happiness")]
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {        
         tableView.reloadData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -49,8 +49,10 @@ class ResultsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resultCell", for: indexPath) as! ResultsTableViewCell
 
-        cell.emotionImage.image = resultData[indexPath.row].image
-        cell.emotionText.text = resultData[indexPath.row].text
+        let data = resultData[indexPath.row]
+        
+        cell.emotionImage.image = UIImage(data: (data.value(forKeyPath: "image") as! NSData) as Data)
+        cell.emotionText.text = (data.value(forKeyPath: "text") as! String)
         
         return cell
     }

@@ -20,10 +20,9 @@
 		D06BDDC21E69C93600BBBC0C /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06BDDC11E69C93600BBBC0C /* opencv2.framework */; };
 		D076E4311E7FDB0D00ED584E /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D076E4301E7FDB0D00ED584E /* SessionTableViewCell.swift */; };
 		D076E4331E7FDB2600ED584E /* SessionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D076E4321E7FDB2600ED584E /* SessionTableViewController.swift */; };
-		D076E4351E7FEB6D00ED584E /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D076E4341E7FEB6D00ED584E /* SessionData.swift */; };
 		D096B6601E5B356800E99D35 /* CameraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096B65F1E5B356800E99D35 /* CameraType.swift */; };
 		D0A6955A1E7DEB88008A19F1 /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A695591E7DEB88008A19F1 /* ResultsTableViewCell.swift */; };
-		D0A6955C1E7DF81B008A19F1 /* ResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A6955B1E7DF81B008A19F1 /* ResultData.swift */; };
+		D0A6955C1E7DF81B008A19F1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A6955B1E7DF81B008A19F1 /* Result.swift */; };
 		D0A6955F1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A6955E1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift */; };
 		D0BDCCF11EA2CE9D00907298 /* EmotionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BDCCF01EA2CE9D00907298 /* EmotionCore.framework */; };
 		D0BDCCF31EA2CEBD00907298 /* EmotionCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0BDCCF21EA2CEBD00907298 /* EmotionCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -38,6 +37,7 @@
 		D0C43F9C1EAAD48C00BD9463 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0C43F911EAAD48C00BD9463 /* OpenCVWrapper.mm */; };
 		D0C43F9D1EAAD48C00BD9463 /* sadness.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43F921EAAD48C00BD9463 /* sadness.xml */; };
 		D0C43F9E1EAAD48C00BD9463 /* surprise.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43F931EAAD48C00BD9463 /* surprise.xml */; };
+		D0C43FE11EAAEF2600BD9463 /* EmotionDetection.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0C43FDF1EAAEF2600BD9463 /* EmotionDetection.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,10 +93,9 @@
 		D06BDDC11E69C93600BBBC0C /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = "Packages/OpenCVFramework-1.0.0/Sources/opencv2.framework"; sourceTree = "<group>"; };
 		D076E4301E7FDB0D00ED584E /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
 		D076E4321E7FDB2600ED584E /* SessionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewController.swift; sourceTree = "<group>"; };
-		D076E4341E7FEB6D00ED584E /* SessionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionData.swift; sourceTree = "<group>"; };
 		D096B65F1E5B356800E99D35 /* CameraType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraType.swift; sourceTree = "<group>"; };
 		D0A695591E7DEB88008A19F1 /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
-		D0A6955B1E7DF81B008A19F1 /* ResultData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultData.swift; sourceTree = "<group>"; };
+		D0A6955B1E7DF81B008A19F1 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		D0A6955E1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectedEmotionViewController.swift; sourceTree = "<group>"; };
 		D0BDCCF01EA2CE9D00907298 /* EmotionCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EmotionCore.framework; path = "Packages/EmotionCore-1.0.14/Sources/EmotionCore.framework"; sourceTree = "<group>"; };
 		D0BDCCF21EA2CEBD00907298 /* EmotionCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EmotionCore.framework; path = "Packages/EmotionCore-1.0.14/Sources/EmotionCore.framework"; sourceTree = "<group>"; };
@@ -112,6 +111,7 @@
 		D0C43F911EAAD48C00BD9463 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OpenCVWrapper.mm; path = "Packages/OpenCVWrapper-1.0.6/Sources/OpenCVWrapper.mm"; sourceTree = SOURCE_ROOT; };
 		D0C43F921EAAD48C00BD9463 /* sadness.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = sadness.xml; path = "Packages/OpenCVWrapper-1.0.6/Sources/sadness.xml"; sourceTree = SOURCE_ROOT; };
 		D0C43F931EAAD48C00BD9463 /* surprise.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = surprise.xml; path = "Packages/OpenCVWrapper-1.0.6/Sources/surprise.xml"; sourceTree = SOURCE_ROOT; };
+		D0C43FE01EAAEF2600BD9463 /* EmotionDetection.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmotionDetection.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,8 +176,8 @@
 				D02C1E611E59F8BE003C5467 /* Info.plist */,
 				D02C1E861E5A1841003C5467 /* CaptureOutput.swift */,
 				D096B65F1E5B356800E99D35 /* CameraType.swift */,
-				D0A6955B1E7DF81B008A19F1 /* ResultData.swift */,
-				D076E4341E7FEB6D00ED584E /* SessionData.swift */,
+				D0A6955B1E7DF81B008A19F1 /* Result.swift */,
+				D0C43FDF1EAAEF2600BD9463 /* EmotionDetection.xcdatamodeld */,
 			);
 			path = "Emotion Detect";
 			sourceTree = "<group>";
@@ -401,8 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D076E4311E7FDB0D00ED584E /* SessionTableViewCell.swift in Sources */,
-				D0A6955C1E7DF81B008A19F1 /* ResultData.swift in Sources */,
-				D076E4351E7FEB6D00ED584E /* SessionData.swift in Sources */,
+				D0A6955C1E7DF81B008A19F1 /* Result.swift in Sources */,
 				D02A9FB51E7C593E005AD526 /* ResultsTableViewController.swift in Sources */,
 				D0C43F9C1EAAD48C00BD9463 /* OpenCVWrapper.mm in Sources */,
 				D02C1E581E59F8BE003C5467 /* SecondViewController.swift in Sources */,
@@ -413,6 +412,7 @@
 				D0A6955F1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift in Sources */,
 				D02C1E561E59F8BE003C5467 /* LiveViewModeViewController.swift in Sources */,
 				D02C1E871E5A1841003C5467 /* CaptureOutput.swift in Sources */,
+				D0C43FE11EAAEF2600BD9463 /* EmotionDetection.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,6 +705,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D0C43FDF1EAAEF2600BD9463 /* EmotionDetection.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D0C43FE01EAAEF2600BD9463 /* EmotionDetection.xcdatamodel */,
+			);
+			currentVersion = D0C43FE01EAAEF2600BD9463 /* EmotionDetection.xcdatamodel */;
+			path = EmotionDetection.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D02C1E481E59F8BE003C5467 /* Project object */;
 }

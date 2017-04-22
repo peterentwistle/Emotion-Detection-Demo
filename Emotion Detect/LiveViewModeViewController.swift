@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
 class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
@@ -16,7 +17,7 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
     @IBOutlet weak var emotionIcon: UIImageView!
 	
 	private var sessionData: [SessionData] = []
-	private var currentResult: [ResultData] = []
+	private var currentResult: [Result] = []
     
     var currentCamera: CameraType!
     var openCVWrapper: OpenCVWrapper!
@@ -64,8 +65,8 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
         startDetecting = false
 
         if hasRan {
-			sessionData.append(SessionData(date: "\(Date())", resultData: currentResult))
-			
+            self.save(date: Date(), resultData: currentResult)
+            
 			// Switch tab
             let tabNumber = 3
             let navController = tabBarController?.viewControllers?[tabNumber] as! UINavigationController
@@ -122,7 +123,51 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
     private func detectedEmotion(name: String, response: DetectedResult?) {
         showImage(imageName: "happiness")
         print("\(name)!")
-        currentResult.append(ResultData(image: (response?.frame)!, text: name))
+        currentResult.append(Result(image: (response?.frame)!, text: name))
+    }
+    
+    private func save(date: Date, resultData: [Result]) {
+        
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        // Create session data entity
+        let entity = NSEntityDescription.entity(forEntityName: "SessionData",
+                                                in: managedContext)!
+        
+        let session = NSManagedObject(entity: entity,
+                                      insertInto: managedContext)
+        
+        // Set the date of the session
+        session.setValue(date, forKeyPath: "date")
+        
+        // For each result create resultData and add it to the session
+        for result in resultData {
+            
+            let entity = NSEntityDescription.entity(forEntityName: "ResultData",
+                                                   in: managedContext)!
+            let resultData = NSManagedObject(entity: entity,
+                                            insertInto: managedContext)
+            
+            resultData.setValue(result.text, forKey: "text")
+            resultData.setValue(UIImagePNGRepresentation(result.image)! as NSData, forKey: "image")
+            
+            // Set relationship to session
+            resultData.setValue(session, forKey: "sessionData")
+        }
+        
+        // Save the session
+        do {
+            try managedContext.save()
+            sessionData.append(session as! SessionData)
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
     
     private func cameraDevices(position: AVCaptureDevicePosition) -> [AVCaptureDevice]? {

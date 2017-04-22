@@ -18,8 +18,8 @@ class DetectedEmotionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        replaceTitleValue(textField: viewTitle, value: data.text)
-        emotionImage.image = data.image
+        replaceTitleValue(textField: viewTitle, value: (data.value(forKeyPath: "text") as! String))
+        emotionImage.image = UIImage(data: (data.value(forKeyPath: "image") as! NSData) as Data)
     }
 
     override func didReceiveMemoryWarning() {
