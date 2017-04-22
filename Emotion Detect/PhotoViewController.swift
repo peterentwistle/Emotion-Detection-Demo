@@ -17,6 +17,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var detectedEmotionValue: UILabel!
+    @IBOutlet weak var detectedEmotionsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         // Do any additional setup after loading the view.
         openCVWrapper = OpenCVWrapper()
         detectedEmotionValue.text = ""
+        detectedEmotionsLabel.isHidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,6 +44,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBAction func analyseImage(_ sender: UIBarButtonItem) {
         if imageView.image != nil {
             DispatchQueue.main.async {
+                self.detectedEmotionsLabel.isHidden = false
                 self.detectedEmotionValue.text = "Analysing..."
                 self.imageView.image = self.photo
                 DispatchQueue.main.async(execute: {
