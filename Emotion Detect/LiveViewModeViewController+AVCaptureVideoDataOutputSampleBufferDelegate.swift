@@ -16,7 +16,8 @@ extension LiveViewModeViewController: AVCaptureVideoDataOutputSampleBufferDelega
             connection.videoOrientation = AVCaptureVideoOrientation.portrait
             
             if startDetecting {
-                let response = openCVWrapper.detectAndDisplay(image)
+                
+                let response = openCVWrapper.detectAndDisplay(image, posNegMode: posNegMode)
                 imageView.image = response?.frame
                 
                 if let emotion = response?.detectedEmotion {
@@ -38,6 +39,10 @@ extension LiveViewModeViewController: AVCaptureVideoDataOutputSampleBufferDelega
                         detectedEmotion(name: "Surprise", response: response)
                     case .disgust:
                         detectedEmotion(name: "Disgust", response: response)
+                    case .positive:
+                        detectedEmotion(name: "Positive", response: response)
+                    case .negative:
+                        detectedEmotion(name: "Negative", response: response)
                     default:
                         hideImage()
                         print("None")

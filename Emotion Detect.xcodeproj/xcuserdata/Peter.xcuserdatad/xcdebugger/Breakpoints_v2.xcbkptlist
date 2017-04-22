@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Emotion Detect/LiveViewModeViewController.swift"
-            timestampString = "514557154.095523"
+            timestampString = "514561367.224691"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "stopDetecting(_:)"
             landmarkType = "7">
          </BreakpointContent>

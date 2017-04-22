@@ -16,7 +16,6 @@
 		D02C1E601E59F8BE003C5467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02C1E5E1E59F8BE003C5467 /* LaunchScreen.storyboard */; };
 		D02C1E6B1E59F8BE003C5467 /* Emotion_DetectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E6A1E59F8BE003C5467 /* Emotion_DetectTests.swift */; };
 		D02C1E761E59F8BE003C5467 /* Emotion_DetectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E751E59F8BE003C5467 /* Emotion_DetectUITests.swift */; };
-		D02C1E871E5A1841003C5467 /* CaptureOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E861E5A1841003C5467 /* CaptureOutput.swift */; };
 		D06BDDC21E69C93600BBBC0C /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06BDDC11E69C93600BBBC0C /* opencv2.framework */; };
 		D076E4311E7FDB0D00ED584E /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D076E4301E7FDB0D00ED584E /* SessionTableViewCell.swift */; };
 		D076E4331E7FDB2600ED584E /* SessionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D076E4321E7FDB2600ED584E /* SessionTableViewController.swift */; };
@@ -26,19 +25,22 @@
 		D0A6955F1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A6955E1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift */; };
 		D0BDCCF11EA2CE9D00907298 /* EmotionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BDCCF01EA2CE9D00907298 /* EmotionCore.framework */; };
 		D0BDCCF31EA2CEBD00907298 /* EmotionCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0BDCCF21EA2CEBD00907298 /* EmotionCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D0C43F941EAAD48C00BD9463 /* anger.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43F881EAAD48C00BD9463 /* anger.xml */; };
-		D0C43F951EAAD48C00BD9463 /* contempt.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43F891EAAD48C00BD9463 /* contempt.xml */; };
-		D0C43F961EAAD48C00BD9463 /* disgust.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43F8A1EAAD48C00BD9463 /* disgust.xml */; };
-		D0C43F971EAAD48C00BD9463 /* fear.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43F8B1EAAD48C00BD9463 /* fear.xml */; };
-		D0C43F981EAAD48C00BD9463 /* haarcascade_eye_tree_eyeglasses.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43F8C1EAAD48C00BD9463 /* haarcascade_eye_tree_eyeglasses.xml */; };
-		D0C43F991EAAD48C00BD9463 /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43F8D1EAAD48C00BD9463 /* haarcascade_frontalface_alt.xml */; };
-		D0C43F9A1EAAD48C00BD9463 /* happiness.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43F8E1EAAD48C00BD9463 /* happiness.xml */; };
-		D0C43F9B1EAAD48C00BD9463 /* neutral.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43F8F1EAAD48C00BD9463 /* neutral.xml */; };
-		D0C43F9C1EAAD48C00BD9463 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0C43F911EAAD48C00BD9463 /* OpenCVWrapper.mm */; };
-		D0C43F9D1EAAD48C00BD9463 /* sadness.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43F921EAAD48C00BD9463 /* sadness.xml */; };
-		D0C43F9E1EAAD48C00BD9463 /* surprise.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43F931EAAD48C00BD9463 /* surprise.xml */; };
 		D0C43FE11EAAEF2600BD9463 /* EmotionDetection.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0C43FDF1EAAEF2600BD9463 /* EmotionDetection.xcdatamodeld */; };
 		D0C43FE31EAB8A4000BD9463 /* LiveViewModeViewController+AVCaptureVideoDataOutputSampleBufferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C43FE21EAB8A4000BD9463 /* LiveViewModeViewController+AVCaptureVideoDataOutputSampleBufferDelegate.swift */; };
+		D0C43FEB1EABA12800BD9463 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C43FEA1EABA12800BD9463 /* SettingsViewController.swift */; };
+		D0C43FFD1EABAC4D00BD9463 /* anger.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43FEF1EABAC4D00BD9463 /* anger.xml */; };
+		D0C43FFE1EABAC4D00BD9463 /* contempt.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43FF01EABAC4D00BD9463 /* contempt.xml */; };
+		D0C43FFF1EABAC4D00BD9463 /* disgust.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43FF11EABAC4D00BD9463 /* disgust.xml */; };
+		D0C440001EABAC4D00BD9463 /* fear.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43FF21EABAC4D00BD9463 /* fear.xml */; };
+		D0C440011EABAC4D00BD9463 /* haarcascade_eye_tree_eyeglasses.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43FF31EABAC4D00BD9463 /* haarcascade_eye_tree_eyeglasses.xml */; };
+		D0C440021EABAC4D00BD9463 /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43FF41EABAC4D00BD9463 /* haarcascade_frontalface_alt.xml */; };
+		D0C440031EABAC4D00BD9463 /* happiness.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43FF51EABAC4D00BD9463 /* happiness.xml */; };
+		D0C440041EABAC4D00BD9463 /* negative.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43FF61EABAC4D00BD9463 /* negative.xml */; };
+		D0C440051EABAC4D00BD9463 /* neutral.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43FF71EABAC4D00BD9463 /* neutral.xml */; };
+		D0C440061EABAC4D00BD9463 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0C43FF91EABAC4D00BD9463 /* OpenCVWrapper.mm */; };
+		D0C440071EABAC4D00BD9463 /* positive.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43FFA1EABAC4D00BD9463 /* positive.xml */; };
+		D0C440081EABAC4D00BD9463 /* sadness.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43FFB1EABAC4D00BD9463 /* sadness.xml */; };
+		D0C440091EABAC4D00BD9463 /* surprise.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43FFC1EABAC4D00BD9463 /* surprise.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +91,6 @@
 		D02C1E751E59F8BE003C5467 /* Emotion_DetectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emotion_DetectUITests.swift; sourceTree = "<group>"; };
 		D02C1E771E59F8BE003C5467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D02C1E841E5A113E003C5467 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		D02C1E861E5A1841003C5467 /* CaptureOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureOutput.swift; sourceTree = "<group>"; };
 		D06BDDB41E69C84E00BBBC0C /* Emotion Detect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Emotion Detect-Bridging-Header.h"; sourceTree = "<group>"; };
 		D06BDDC11E69C93600BBBC0C /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = "Packages/OpenCVFramework-1.0.0/Sources/opencv2.framework"; sourceTree = "<group>"; };
 		D076E4301E7FDB0D00ED584E /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,22 +99,25 @@
 		D0A695591E7DEB88008A19F1 /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 		D0A6955B1E7DF81B008A19F1 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		D0A6955E1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectedEmotionViewController.swift; sourceTree = "<group>"; };
-		D0BDCCF01EA2CE9D00907298 /* EmotionCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EmotionCore.framework; path = "Packages/EmotionCore-1.0.14/Sources/EmotionCore.framework"; sourceTree = "<group>"; };
-		D0BDCCF21EA2CEBD00907298 /* EmotionCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EmotionCore.framework; path = "Packages/EmotionCore-1.0.14/Sources/EmotionCore.framework"; sourceTree = "<group>"; };
-		D0C43F881EAAD48C00BD9463 /* anger.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = anger.xml; path = "Packages/OpenCVWrapper-1.0.6/Sources/anger.xml"; sourceTree = SOURCE_ROOT; };
-		D0C43F891EAAD48C00BD9463 /* contempt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = contempt.xml; path = "Packages/OpenCVWrapper-1.0.6/Sources/contempt.xml"; sourceTree = SOURCE_ROOT; };
-		D0C43F8A1EAAD48C00BD9463 /* disgust.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = disgust.xml; path = "Packages/OpenCVWrapper-1.0.6/Sources/disgust.xml"; sourceTree = SOURCE_ROOT; };
-		D0C43F8B1EAAD48C00BD9463 /* fear.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = fear.xml; path = "Packages/OpenCVWrapper-1.0.6/Sources/fear.xml"; sourceTree = SOURCE_ROOT; };
-		D0C43F8C1EAAD48C00BD9463 /* haarcascade_eye_tree_eyeglasses.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = haarcascade_eye_tree_eyeglasses.xml; path = "Packages/OpenCVWrapper-1.0.6/Sources/haarcascade_eye_tree_eyeglasses.xml"; sourceTree = SOURCE_ROOT; };
-		D0C43F8D1EAAD48C00BD9463 /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = haarcascade_frontalface_alt.xml; path = "Packages/OpenCVWrapper-1.0.6/Sources/haarcascade_frontalface_alt.xml"; sourceTree = SOURCE_ROOT; };
-		D0C43F8E1EAAD48C00BD9463 /* happiness.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = happiness.xml; path = "Packages/OpenCVWrapper-1.0.6/Sources/happiness.xml"; sourceTree = SOURCE_ROOT; };
-		D0C43F8F1EAAD48C00BD9463 /* neutral.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = neutral.xml; path = "Packages/OpenCVWrapper-1.0.6/Sources/neutral.xml"; sourceTree = SOURCE_ROOT; };
-		D0C43F901EAAD48C00BD9463 /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenCVWrapper.h; path = "Packages/OpenCVWrapper-1.0.6/Sources/OpenCVWrapper.h"; sourceTree = SOURCE_ROOT; };
-		D0C43F911EAAD48C00BD9463 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OpenCVWrapper.mm; path = "Packages/OpenCVWrapper-1.0.6/Sources/OpenCVWrapper.mm"; sourceTree = SOURCE_ROOT; };
-		D0C43F921EAAD48C00BD9463 /* sadness.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = sadness.xml; path = "Packages/OpenCVWrapper-1.0.6/Sources/sadness.xml"; sourceTree = SOURCE_ROOT; };
-		D0C43F931EAAD48C00BD9463 /* surprise.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = surprise.xml; path = "Packages/OpenCVWrapper-1.0.6/Sources/surprise.xml"; sourceTree = SOURCE_ROOT; };
+		D0BDCCF01EA2CE9D00907298 /* EmotionCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EmotionCore.framework; path = "Packages/EmotionCore-1.0.15/Sources/EmotionCore.framework"; sourceTree = "<group>"; };
+		D0BDCCF21EA2CEBD00907298 /* EmotionCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EmotionCore.framework; path = "Packages/EmotionCore-1.0.15/Sources/EmotionCore.framework"; sourceTree = "<group>"; };
 		D0C43FE01EAAEF2600BD9463 /* EmotionDetection.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmotionDetection.xcdatamodel; sourceTree = "<group>"; };
 		D0C43FE21EAB8A4000BD9463 /* LiveViewModeViewController+AVCaptureVideoDataOutputSampleBufferDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LiveViewModeViewController+AVCaptureVideoDataOutputSampleBufferDelegate.swift"; sourceTree = "<group>"; };
+		D0C43FEA1EABA12800BD9463 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D0C43FEF1EABAC4D00BD9463 /* anger.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = anger.xml; path = "Packages/OpenCVWrapper-1.0.7/Sources/anger.xml"; sourceTree = SOURCE_ROOT; };
+		D0C43FF01EABAC4D00BD9463 /* contempt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = contempt.xml; path = "Packages/OpenCVWrapper-1.0.7/Sources/contempt.xml"; sourceTree = SOURCE_ROOT; };
+		D0C43FF11EABAC4D00BD9463 /* disgust.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = disgust.xml; path = "Packages/OpenCVWrapper-1.0.7/Sources/disgust.xml"; sourceTree = SOURCE_ROOT; };
+		D0C43FF21EABAC4D00BD9463 /* fear.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = fear.xml; path = "Packages/OpenCVWrapper-1.0.7/Sources/fear.xml"; sourceTree = SOURCE_ROOT; };
+		D0C43FF31EABAC4D00BD9463 /* haarcascade_eye_tree_eyeglasses.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = haarcascade_eye_tree_eyeglasses.xml; path = "Packages/OpenCVWrapper-1.0.7/Sources/haarcascade_eye_tree_eyeglasses.xml"; sourceTree = SOURCE_ROOT; };
+		D0C43FF41EABAC4D00BD9463 /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = haarcascade_frontalface_alt.xml; path = "Packages/OpenCVWrapper-1.0.7/Sources/haarcascade_frontalface_alt.xml"; sourceTree = SOURCE_ROOT; };
+		D0C43FF51EABAC4D00BD9463 /* happiness.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = happiness.xml; path = "Packages/OpenCVWrapper-1.0.7/Sources/happiness.xml"; sourceTree = SOURCE_ROOT; };
+		D0C43FF61EABAC4D00BD9463 /* negative.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = negative.xml; path = "Packages/OpenCVWrapper-1.0.7/Sources/negative.xml"; sourceTree = SOURCE_ROOT; };
+		D0C43FF71EABAC4D00BD9463 /* neutral.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = neutral.xml; path = "Packages/OpenCVWrapper-1.0.7/Sources/neutral.xml"; sourceTree = SOURCE_ROOT; };
+		D0C43FF81EABAC4D00BD9463 /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenCVWrapper.h; path = "Packages/OpenCVWrapper-1.0.7/Sources/OpenCVWrapper.h"; sourceTree = SOURCE_ROOT; };
+		D0C43FF91EABAC4D00BD9463 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OpenCVWrapper.mm; path = "Packages/OpenCVWrapper-1.0.7/Sources/OpenCVWrapper.mm"; sourceTree = SOURCE_ROOT; };
+		D0C43FFA1EABAC4D00BD9463 /* positive.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = positive.xml; path = "Packages/OpenCVWrapper-1.0.7/Sources/positive.xml"; sourceTree = SOURCE_ROOT; };
+		D0C43FFB1EABAC4D00BD9463 /* sadness.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = sadness.xml; path = "Packages/OpenCVWrapper-1.0.7/Sources/sadness.xml"; sourceTree = SOURCE_ROOT; };
+		D0C43FFC1EABAC4D00BD9463 /* surprise.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = surprise.xml; path = "Packages/OpenCVWrapper-1.0.7/Sources/surprise.xml"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +180,6 @@
 				D02C1E5C1E59F8BE003C5467 /* Assets.xcassets */,
 				D02C1E5E1E59F8BE003C5467 /* LaunchScreen.storyboard */,
 				D02C1E611E59F8BE003C5467 /* Info.plist */,
-				D02C1E861E5A1841003C5467 /* CaptureOutput.swift */,
 				D096B65F1E5B356800E99D35 /* CameraType.swift */,
 				D0A6955B1E7DF81B008A19F1 /* Result.swift */,
 				D0C43FDF1EAAEF2600BD9463 /* EmotionDetection.xcdatamodeld */,
@@ -215,18 +218,20 @@
 		D06BDDB31E69C7E400BBBC0C /* OpenCVWrapper */ = {
 			isa = PBXGroup;
 			children = (
-				D0C43F881EAAD48C00BD9463 /* anger.xml */,
-				D0C43F891EAAD48C00BD9463 /* contempt.xml */,
-				D0C43F8A1EAAD48C00BD9463 /* disgust.xml */,
-				D0C43F8B1EAAD48C00BD9463 /* fear.xml */,
-				D0C43F8C1EAAD48C00BD9463 /* haarcascade_eye_tree_eyeglasses.xml */,
-				D0C43F8D1EAAD48C00BD9463 /* haarcascade_frontalface_alt.xml */,
-				D0C43F8E1EAAD48C00BD9463 /* happiness.xml */,
-				D0C43F8F1EAAD48C00BD9463 /* neutral.xml */,
-				D0C43F901EAAD48C00BD9463 /* OpenCVWrapper.h */,
-				D0C43F911EAAD48C00BD9463 /* OpenCVWrapper.mm */,
-				D0C43F921EAAD48C00BD9463 /* sadness.xml */,
-				D0C43F931EAAD48C00BD9463 /* surprise.xml */,
+				D0C43FEF1EABAC4D00BD9463 /* anger.xml */,
+				D0C43FF01EABAC4D00BD9463 /* contempt.xml */,
+				D0C43FF11EABAC4D00BD9463 /* disgust.xml */,
+				D0C43FF21EABAC4D00BD9463 /* fear.xml */,
+				D0C43FF31EABAC4D00BD9463 /* haarcascade_eye_tree_eyeglasses.xml */,
+				D0C43FF41EABAC4D00BD9463 /* haarcascade_frontalface_alt.xml */,
+				D0C43FF51EABAC4D00BD9463 /* happiness.xml */,
+				D0C43FF61EABAC4D00BD9463 /* negative.xml */,
+				D0C43FF71EABAC4D00BD9463 /* neutral.xml */,
+				D0C43FF81EABAC4D00BD9463 /* OpenCVWrapper.h */,
+				D0C43FF91EABAC4D00BD9463 /* OpenCVWrapper.mm */,
+				D0C43FFA1EABAC4D00BD9463 /* positive.xml */,
+				D0C43FFB1EABAC4D00BD9463 /* sadness.xml */,
+				D0C43FFC1EABAC4D00BD9463 /* surprise.xml */,
 				D06BDDB41E69C84E00BBBC0C /* Emotion Detect-Bridging-Header.h */,
 			);
 			path = OpenCVWrapper;
@@ -245,11 +250,12 @@
 			isa = PBXGroup;
 			children = (
 				D02C1E551E59F8BE003C5467 /* LiveViewModeViewController.swift */,
+				D0C43FE21EAB8A4000BD9463 /* LiveViewModeViewController+AVCaptureVideoDataOutputSampleBufferDelegate.swift */,
 				D02C1E571E59F8BE003C5467 /* SecondViewController.swift */,
 				D02A9FB41E7C593E005AD526 /* ResultsTableViewController.swift */,
 				D076E4321E7FDB2600ED584E /* SessionTableViewController.swift */,
 				D0A6955E1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift */,
-				D0C43FE21EAB8A4000BD9463 /* LiveViewModeViewController+AVCaptureVideoDataOutputSampleBufferDelegate.swift */,
+				D0C43FEA1EABA12800BD9463 /* SettingsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -366,19 +372,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C440091EABAC4D00BD9463 /* surprise.xml in Resources */,
 				D02C1E601E59F8BE003C5467 /* LaunchScreen.storyboard in Resources */,
-				D0C43F941EAAD48C00BD9463 /* anger.xml in Resources */,
+				D0C43FFD1EABAC4D00BD9463 /* anger.xml in Resources */,
 				D02C1E5D1E59F8BE003C5467 /* Assets.xcassets in Resources */,
-				D0C43F9D1EAAD48C00BD9463 /* sadness.xml in Resources */,
-				D0C43F961EAAD48C00BD9463 /* disgust.xml in Resources */,
-				D0C43F971EAAD48C00BD9463 /* fear.xml in Resources */,
-				D0C43F9A1EAAD48C00BD9463 /* happiness.xml in Resources */,
-				D0C43F951EAAD48C00BD9463 /* contempt.xml in Resources */,
+				D0C43FFF1EABAC4D00BD9463 /* disgust.xml in Resources */,
+				D0C440041EABAC4D00BD9463 /* negative.xml in Resources */,
+				D0C440081EABAC4D00BD9463 /* sadness.xml in Resources */,
+				D0C440051EABAC4D00BD9463 /* neutral.xml in Resources */,
+				D0C440001EABAC4D00BD9463 /* fear.xml in Resources */,
+				D0C440031EABAC4D00BD9463 /* happiness.xml in Resources */,
+				D0C440071EABAC4D00BD9463 /* positive.xml in Resources */,
+				D0C43FFE1EABAC4D00BD9463 /* contempt.xml in Resources */,
 				D02C1E5B1E59F8BE003C5467 /* Main.storyboard in Resources */,
-				D0C43F9B1EAAD48C00BD9463 /* neutral.xml in Resources */,
-				D0C43F991EAAD48C00BD9463 /* haarcascade_frontalface_alt.xml in Resources */,
-				D0C43F981EAAD48C00BD9463 /* haarcascade_eye_tree_eyeglasses.xml in Resources */,
-				D0C43F9E1EAAD48C00BD9463 /* surprise.xml in Resources */,
+				D0C440021EABAC4D00BD9463 /* haarcascade_frontalface_alt.xml in Resources */,
+				D0C440011EABAC4D00BD9463 /* haarcascade_eye_tree_eyeglasses.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,16 +414,16 @@
 				D076E4311E7FDB0D00ED584E /* SessionTableViewCell.swift in Sources */,
 				D0A6955C1E7DF81B008A19F1 /* Result.swift in Sources */,
 				D02A9FB51E7C593E005AD526 /* ResultsTableViewController.swift in Sources */,
-				D0C43F9C1EAAD48C00BD9463 /* OpenCVWrapper.mm in Sources */,
 				D02C1E581E59F8BE003C5467 /* SecondViewController.swift in Sources */,
+				D0C440061EABAC4D00BD9463 /* OpenCVWrapper.mm in Sources */,
 				D0A6955A1E7DEB88008A19F1 /* ResultsTableViewCell.swift in Sources */,
 				D096B6601E5B356800E99D35 /* CameraType.swift in Sources */,
 				D076E4331E7FDB2600ED584E /* SessionTableViewController.swift in Sources */,
 				D02C1E541E59F8BE003C5467 /* AppDelegate.swift in Sources */,
+				D0C43FEB1EABA12800BD9463 /* SettingsViewController.swift in Sources */,
 				D0A6955F1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift in Sources */,
 				D0C43FE31EAB8A4000BD9463 /* LiveViewModeViewController+AVCaptureVideoDataOutputSampleBufferDelegate.swift in Sources */,
 				D02C1E561E59F8BE003C5467 /* LiveViewModeViewController.swift in Sources */,
-				D02C1E871E5A1841003C5467 /* CaptureOutput.swift in Sources */,
 				D0C43FE11EAAEF2600BD9463 /* EmotionDetection.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +585,7 @@
 					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.12/Sources",
 					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.13/Sources",
 					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.14/Sources",
+					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.15/Sources",
 				);
 				INFOPLIST_FILE = "Emotion Detect/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -601,6 +610,7 @@
 					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.12/Sources",
 					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.13/Sources",
 					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.14/Sources",
+					"$(PROJECT_DIR)/Packages/EmotionCore-1.0.15/Sources",
 				);
 				INFOPLIST_FILE = "Emotion Detect/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

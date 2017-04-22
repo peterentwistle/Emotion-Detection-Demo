@@ -25,6 +25,7 @@ class LiveViewModeViewController: UIViewController {
     var previewLayer: AVCaptureVideoPreviewLayer!
     var startDetecting: Bool = false
     var hasRan: Bool = false
+    var posNegMode: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
