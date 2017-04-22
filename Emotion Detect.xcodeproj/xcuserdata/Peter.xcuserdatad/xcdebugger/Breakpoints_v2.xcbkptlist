@@ -115,53 +115,5 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Emotion Detect/LiveViewModeViewController.swift"
-            timestampString = "514423542.682881"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "captureOutput(_:didOutputSampleBuffer:from:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Emotion_Detect.LiveViewModeViewController.(captureOutput (Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.AVCaptureOutput&gt;, didOutputSampleBuffer : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.CMSampleBuffer&gt;, from : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.AVCaptureConnection&gt;) -&gt; ()).(closure #1)"
-                  moduleName = "Emotion Detect"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Peter/Library/Mobile%20Documents/com~apple~CloudDocs/Development/FinalYearProject/Emotion%20Detect/Emotion%20Detect/LiveViewModeViewController.swift"
-                  timestampString = "511702890.896755"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "94"
-                  endingLineNumber = "94"
-                  offsetFromSymbolStart = "1332">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Emotion_Detect.LiveViewModeViewController.(captureOutput (Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.AVCaptureOutput&gt;, didOutputSampleBuffer : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.CMSampleBuffer&gt;, from : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.AVCaptureConnection&gt;) -&gt; ()).(closure #1)"
-                  moduleName = "Emotion Detect"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Peter/Library/Mobile%20Documents/com~apple~CloudDocs/Development/FinalYearProject/Emotion%20Detect/Emotion%20Detect/LiveViewModeViewController.swift"
-                  timestampString = "511702890.898272"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "94"
-                  endingLineNumber = "94"
-                  offsetFromSymbolStart = "2304">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -89,21 +89,40 @@ class LiveViewModeViewController: UIViewController, AVCaptureVideoDataOutputSamp
                 
                 if let emotion = response?.detectedEmotion {
                     
-                    if emotion.emotion == .happiness {
-                        showImage(imageName: "happiness")
-                        print("Happiness!")
-                        
-                        currentResult.append(ResultData(image: (response?.frame)!, text: "Happiness"))
-                    } else {
+                    switch emotion.emotion {
+                    case .happiness:
+                        detectedEmotion(name: "Happiness", response: response)
+                    case .anger:
+                        detectedEmotion(name: "Anger", response: response)
+                    case .contempt:
+                        detectedEmotion(name: "Contempt", response: response)
+                    case .fear:
+                       detectedEmotion(name: "Fear", response: response)
+                    case .neutral:
+                        detectedEmotion(name: "Neutral", response: response)
+                    case .sadness:
+                        detectedEmotion(name: "Sadness", response: response)
+                    case .surprise:
+                        detectedEmotion(name: "Surprise", response: response)
+                    case .disgust:
+                        detectedEmotion(name: "Disgust", response: response)
+                    default:
                         hideImage()
                         print("None")
                     }
+                    
                 }
             } else {
                 imageView.image = image
             }
             
         })
+    }
+    
+    private func detectedEmotion(name: String, response: DetectedResult?) {
+        showImage(imageName: "happiness")
+        print("\(name)!")
+        currentResult.append(ResultData(image: (response?.frame)!, text: name))
     }
     
     private func cameraDevices(position: AVCaptureDevicePosition) -> [AVCaptureDevice]? {
