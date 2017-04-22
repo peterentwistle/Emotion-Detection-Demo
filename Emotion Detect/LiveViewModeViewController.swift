@@ -15,7 +15,9 @@ class LiveViewModeViewController: UIViewController {
     @IBOutlet weak var switchCamera: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var emotionIcon: UIImageView!
-	
+    @IBOutlet weak var startbutton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    
 	private var sessionData: [SessionData] = []
     var currentResult: [Result] = []
     
@@ -29,6 +31,9 @@ class LiveViewModeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startbutton = setupButton(button: startbutton)
+        stopButton = setupButton(button: stopButton)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -159,6 +164,14 @@ class LiveViewModeViewController: UIViewController {
         
         myOutput.setSampleBufferDelegate(self, queue: queue)
         captureSession.addOutput(myOutput)
+    }
+    
+    func setupButton(button: UIButton) -> UIButton {
+        button.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.8)
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.clear.cgColor
+        return button
     }
 
     func showImage(imageName: String) {

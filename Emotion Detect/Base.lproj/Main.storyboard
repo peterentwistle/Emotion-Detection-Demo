@@ -65,6 +65,8 @@
                     <connections>
                         <outlet property="emotionIcon" destination="h4b-EO-p58" id="ZqO-6u-5vr"/>
                         <outlet property="imageView" destination="OF9-cz-EfV" id="NgT-wf-Ymx"/>
+                        <outlet property="startbutton" destination="Q0x-mo-Vwr" id="GQE-VV-mxG"/>
+                        <outlet property="stopButton" destination="5dQ-GK-xa0" id="HcC-qG-RN9"/>
                         <outlet property="switchCamera" destination="WUg-dk-ox1" id="VTU-1J-g0x"/>
                     </connections>
                 </viewController>
@@ -217,7 +219,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="76"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yAr-gh-5X9" id="N7P-Ec-dav">
-                                    <rect key="frame" x="0.0" y="0.0" width="381" height="75.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="381" height="75.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lQR-62-Wal">
@@ -321,7 +323,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Happiness: (value)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUh-fC-FmB">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(value)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUh-fC-FmB">
                                             <rect key="frame" x="16" y="59" width="168" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>

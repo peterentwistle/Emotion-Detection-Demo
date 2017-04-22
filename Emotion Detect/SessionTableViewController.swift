@@ -67,15 +67,13 @@ class SessionTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sessionCell", for: indexPath) as! SessionTableViewCell
 
         let currentSession = sessionData[indexPath.row]
-        
-        let happyResultsCount = currentSession.resultData?.filter {($0 as AnyObject).text == "Happiness"}.count
+
         let recordCount = currentSession.resultData?.count
-        let happinessPercent: Double = (Double(happyResultsCount!) / Double(recordCount!)) * 100
-        
+ 
         let date = currentSession.value(forKeyPath: "date") as! Date
         
         cell.sessionLabel.text = "\(date)"
-        cell.happinessPercent.text = "Happiness: \(String(format: "%.01f", happinessPercent))%"
+        cell.happinessPercent.text = "\(recordCount!) emotions detected"
     
         return cell
     }

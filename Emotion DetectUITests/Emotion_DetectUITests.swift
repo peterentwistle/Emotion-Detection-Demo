@@ -39,7 +39,6 @@ class Emotion_DetectUITests: XCTestCase {
         XCUIApplication().buttons["Stop"].tap()
         
         let tabBarsQuery = XCUIApplication().tabBars
-        tabBarsQuery.buttons["Video"].tap()
         tabBarsQuery.buttons["Photo"].tap()
         tabBarsQuery.buttons["Settings"].tap()
     }
