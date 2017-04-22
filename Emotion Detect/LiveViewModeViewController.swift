@@ -17,7 +17,7 @@ class LiveViewModeViewController: UIViewController {
     @IBOutlet weak var emotionIcon: UIImageView!
 	
 	private var sessionData: [SessionData] = []
-	private var currentResult: [Result] = []
+    var currentResult: [Result] = []
     
     var currentCamera: CameraType!
     var openCVWrapper: OpenCVWrapper!
@@ -76,12 +76,6 @@ class LiveViewModeViewController: UIViewController {
 			sessionTab.sessionData = sessionData
 			self.tabBarController?.selectedIndex = tabNumber
         }
-    }
-    
-    func detectedEmotion(name: String, response: DetectedResult?) {
-        showImage(imageName: "happiness")
-        print("\(name)!")
-        currentResult.append(Result(image: (response?.frame)!, text: name))
     }
     
     private func save(date: Date, resultData: [Result]) {
@@ -167,7 +161,7 @@ class LiveViewModeViewController: UIViewController {
         captureSession.addOutput(myOutput)
     }
 
-    private func showImage(imageName: String) {
+    func showImage(imageName: String) {
         emotionIcon.image = UIImage(named: imageName)
         emotionIcon.isHidden = false
     }
@@ -176,5 +170,13 @@ class LiveViewModeViewController: UIViewController {
         emotionIcon.isHidden = true
     }
     
+}
+
+extension LiveViewModeViewController: EmotionDetectable {
+    func detectedEmotion(name: String, response: DetectedResult?) {
+        showImage(imageName: "happiness")
+        print("\(name)!")
+        currentResult.append(Result(image: (response?.frame)!, text: name))
+    }
 }
 

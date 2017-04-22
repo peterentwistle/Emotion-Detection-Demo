@@ -10,7 +10,6 @@
 		D02A9FB51E7C593E005AD526 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02A9FB41E7C593E005AD526 /* ResultsTableViewController.swift */; };
 		D02C1E541E59F8BE003C5467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E531E59F8BE003C5467 /* AppDelegate.swift */; };
 		D02C1E561E59F8BE003C5467 /* LiveViewModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E551E59F8BE003C5467 /* LiveViewModeViewController.swift */; };
-		D02C1E581E59F8BE003C5467 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C1E571E59F8BE003C5467 /* SecondViewController.swift */; };
 		D02C1E5B1E59F8BE003C5467 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02C1E591E59F8BE003C5467 /* Main.storyboard */; };
 		D02C1E5D1E59F8BE003C5467 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02C1E5C1E59F8BE003C5467 /* Assets.xcassets */; };
 		D02C1E601E59F8BE003C5467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02C1E5E1E59F8BE003C5467 /* LaunchScreen.storyboard */; };
@@ -41,6 +40,9 @@
 		D0C440071EABAC4D00BD9463 /* positive.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43FFA1EABAC4D00BD9463 /* positive.xml */; };
 		D0C440081EABAC4D00BD9463 /* sadness.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43FFB1EABAC4D00BD9463 /* sadness.xml */; };
 		D0C440091EABAC4D00BD9463 /* surprise.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43FFC1EABAC4D00BD9463 /* surprise.xml */; };
+		D0C4400B1EABB09600BD9463 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4400A1EABB09600BD9463 /* VideoViewController.swift */; };
+		D0C4400D1EABBD8200BD9463 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4400C1EABBD8200BD9463 /* PhotoViewController.swift */; };
+		D0C4400F1EABCC2700BD9463 /* EmotionDetectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4400E1EABCC2700BD9463 /* EmotionDetectable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +81,6 @@
 		D02C1E501E59F8BE003C5467 /* Emotion Detect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emotion Detect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02C1E531E59F8BE003C5467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D02C1E551E59F8BE003C5467 /* LiveViewModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewModeViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
-		D02C1E571E59F8BE003C5467 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		D02C1E5A1E59F8BE003C5467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D02C1E5C1E59F8BE003C5467 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D02C1E5F1E59F8BE003C5467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,6 +119,9 @@
 		D0C43FFA1EABAC4D00BD9463 /* positive.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = positive.xml; path = "Packages/OpenCVWrapper-1.0.7/Sources/positive.xml"; sourceTree = SOURCE_ROOT; };
 		D0C43FFB1EABAC4D00BD9463 /* sadness.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = sadness.xml; path = "Packages/OpenCVWrapper-1.0.7/Sources/sadness.xml"; sourceTree = SOURCE_ROOT; };
 		D0C43FFC1EABAC4D00BD9463 /* surprise.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = surprise.xml; path = "Packages/OpenCVWrapper-1.0.7/Sources/surprise.xml"; sourceTree = SOURCE_ROOT; };
+		D0C4400A1EABB09600BD9463 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		D0C4400C1EABBD8200BD9463 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		D0C4400E1EABCC2700BD9463 /* EmotionDetectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionDetectable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,7 @@
 				D096B65F1E5B356800E99D35 /* CameraType.swift */,
 				D0A6955B1E7DF81B008A19F1 /* Result.swift */,
 				D0C43FDF1EAAEF2600BD9463 /* EmotionDetection.xcdatamodeld */,
+				D0C4400E1EABCC2700BD9463 /* EmotionDetectable.swift */,
 			);
 			path = "Emotion Detect";
 			sourceTree = "<group>";
@@ -251,11 +256,12 @@
 			children = (
 				D02C1E551E59F8BE003C5467 /* LiveViewModeViewController.swift */,
 				D0C43FE21EAB8A4000BD9463 /* LiveViewModeViewController+AVCaptureVideoDataOutputSampleBufferDelegate.swift */,
-				D02C1E571E59F8BE003C5467 /* SecondViewController.swift */,
 				D02A9FB41E7C593E005AD526 /* ResultsTableViewController.swift */,
 				D076E4321E7FDB2600ED584E /* SessionTableViewController.swift */,
 				D0A6955E1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift */,
 				D0C43FEA1EABA12800BD9463 /* SettingsViewController.swift */,
+				D0C4400A1EABB09600BD9463 /* VideoViewController.swift */,
+				D0C4400C1EABBD8200BD9463 /* PhotoViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -414,17 +420,19 @@
 				D076E4311E7FDB0D00ED584E /* SessionTableViewCell.swift in Sources */,
 				D0A6955C1E7DF81B008A19F1 /* Result.swift in Sources */,
 				D02A9FB51E7C593E005AD526 /* ResultsTableViewController.swift in Sources */,
-				D02C1E581E59F8BE003C5467 /* SecondViewController.swift in Sources */,
 				D0C440061EABAC4D00BD9463 /* OpenCVWrapper.mm in Sources */,
 				D0A6955A1E7DEB88008A19F1 /* ResultsTableViewCell.swift in Sources */,
 				D096B6601E5B356800E99D35 /* CameraType.swift in Sources */,
 				D076E4331E7FDB2600ED584E /* SessionTableViewController.swift in Sources */,
+				D0C4400B1EABB09600BD9463 /* VideoViewController.swift in Sources */,
 				D02C1E541E59F8BE003C5467 /* AppDelegate.swift in Sources */,
 				D0C43FEB1EABA12800BD9463 /* SettingsViewController.swift in Sources */,
+				D0C4400F1EABCC2700BD9463 /* EmotionDetectable.swift in Sources */,
 				D0A6955F1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift in Sources */,
 				D0C43FE31EAB8A4000BD9463 /* LiveViewModeViewController+AVCaptureVideoDataOutputSampleBufferDelegate.swift in Sources */,
 				D02C1E561E59F8BE003C5467 /* LiveViewModeViewController.swift in Sources */,
 				D0C43FE11EAAEF2600BD9463 /* EmotionDetection.xcdatamodeld in Sources */,
+				D0C4400D1EABBD8200BD9463 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
