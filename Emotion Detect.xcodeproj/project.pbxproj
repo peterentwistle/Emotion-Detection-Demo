@@ -38,6 +38,7 @@
 		D0C43F9D1EAAD48C00BD9463 /* sadness.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43F921EAAD48C00BD9463 /* sadness.xml */; };
 		D0C43F9E1EAAD48C00BD9463 /* surprise.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0C43F931EAAD48C00BD9463 /* surprise.xml */; };
 		D0C43FE11EAAEF2600BD9463 /* EmotionDetection.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0C43FDF1EAAEF2600BD9463 /* EmotionDetection.xcdatamodeld */; };
+		D0C43FE31EAB8A4000BD9463 /* LiveViewModeViewController+AVCaptureVideoDataOutputSampleBufferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C43FE21EAB8A4000BD9463 /* LiveViewModeViewController+AVCaptureVideoDataOutputSampleBufferDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		D0C43F921EAAD48C00BD9463 /* sadness.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = sadness.xml; path = "Packages/OpenCVWrapper-1.0.6/Sources/sadness.xml"; sourceTree = SOURCE_ROOT; };
 		D0C43F931EAAD48C00BD9463 /* surprise.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = surprise.xml; path = "Packages/OpenCVWrapper-1.0.6/Sources/surprise.xml"; sourceTree = SOURCE_ROOT; };
 		D0C43FE01EAAEF2600BD9463 /* EmotionDetection.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmotionDetection.xcdatamodel; sourceTree = "<group>"; };
+		D0C43FE21EAB8A4000BD9463 /* LiveViewModeViewController+AVCaptureVideoDataOutputSampleBufferDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LiveViewModeViewController+AVCaptureVideoDataOutputSampleBufferDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 				D02A9FB41E7C593E005AD526 /* ResultsTableViewController.swift */,
 				D076E4321E7FDB2600ED584E /* SessionTableViewController.swift */,
 				D0A6955E1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift */,
+				D0C43FE21EAB8A4000BD9463 /* LiveViewModeViewController+AVCaptureVideoDataOutputSampleBufferDelegate.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				D076E4331E7FDB2600ED584E /* SessionTableViewController.swift in Sources */,
 				D02C1E541E59F8BE003C5467 /* AppDelegate.swift in Sources */,
 				D0A6955F1E7EFBA1008A19F1 /* DetectedEmotionViewController.swift in Sources */,
+				D0C43FE31EAB8A4000BD9463 /* LiveViewModeViewController+AVCaptureVideoDataOutputSampleBufferDelegate.swift in Sources */,
 				D02C1E561E59F8BE003C5467 /* LiveViewModeViewController.swift in Sources */,
 				D02C1E871E5A1841003C5467 /* CaptureOutput.swift in Sources */,
 				D0C43FE11EAAEF2600BD9463 /* EmotionDetection.xcdatamodeld in Sources */,
