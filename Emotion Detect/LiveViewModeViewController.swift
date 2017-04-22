@@ -69,7 +69,7 @@ class LiveViewModeViewController: UIViewController {
             self.save(date: Date(), resultData: currentResult)
             
 			// Switch tab
-            let tabNumber = 3
+            let tabNumber = 2
             let navController = tabBarController?.viewControllers?[tabNumber] as! UINavigationController
             let sessionTab = navController.viewControllers[0] as! SessionTableViewController
 			
