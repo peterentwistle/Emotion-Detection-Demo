@@ -111,8 +111,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
             endingLineNumber = "69"
-            landmarkName = "stopDetecting(_:)"
-            landmarkType = "7">
+            landmarkName = "LiveViewModeViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -272,86 +272,6 @@
             startingLineNumber = "99"
             endingLineNumber = "99"
             landmarkName = "processFrames(sampleBuffer:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Emotion Detect/PhotoViewController.swift"
-            timestampString = "514588286.99334"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Emotion Detect/PhotoViewController.swift"
-            timestampString = "514588286.99334"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "analyseImage(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Emotion_Detect.PhotoViewController.analyseImage (__ObjC.UIBarButtonItem) -&gt; ()"
-                  moduleName = "Emotion Detect"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Peter/Library/Mobile%20Documents/com~apple~CloudDocs/Development/FinalYearProject/Emotion%20Detect/Emotion%20Detect/PhotoViewController.swift"
-                  timestampString = "514587405.811547"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "292">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Emotion_Detect.PhotoViewController.(analyseImage (__ObjC.UIBarButtonItem) -&gt; ()).(closure #1)"
-                  moduleName = "Emotion Detect"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Peter/Library/Mobile%20Documents/com~apple~CloudDocs/Development/FinalYearProject/Emotion%20Detect/Emotion%20Detect/PhotoViewController.swift"
-                  timestampString = "514587405.81272"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Emotion Detect/PhotoViewController.swift"
-            timestampString = "514588286.99334"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "analyseImage(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

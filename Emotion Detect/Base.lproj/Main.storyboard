@@ -334,7 +334,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="happinessPercent" destination="IUh-fC-FmB" id="CHT-lB-r7w"/>
+                                    <outlet property="numberEmotionsLabel" destination="IUh-fC-FmB" id="tD2-ZQ-wZi"/>
                                     <outlet property="sessionLabel" destination="oGF-3v-CI5" id="Yh4-Lq-MhS"/>
                                     <segue destination="Uxx-XW-Tj7" kind="show" identifier="sessionSegue" id="asj-VF-utS"/>
                                 </connections>

@@ -73,7 +73,7 @@ class SessionTableViewController: UITableViewController {
         let date = currentSession.value(forKeyPath: "date") as! Date
         
         cell.sessionLabel.text = "\(date)"
-        cell.happinessPercent.text = "\(recordCount!) emotions detected"
+        cell.numberEmotionsLabel.text = "\(recordCount!) emotions detected"
     
         return cell
     }
@@ -97,7 +97,6 @@ class SessionTableViewController: UITableViewController {
         return true
     }
     */
-
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
