@@ -11,7 +11,7 @@ import UIKit
 class SessionTableViewCell: UITableViewCell {
 
 	@IBOutlet weak var sessionLabel: UILabel!
-	@IBOutlet weak var happinessPercent: UILabel!
+	@IBOutlet weak var numberEmotionsLabel: UILabel!
 	
     override func awakeFromNib() {
         super.awakeFromNib()
